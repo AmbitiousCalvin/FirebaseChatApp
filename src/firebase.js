@@ -1,6 +1,12 @@
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
-import { getFirestore, collection } from "firebase/firestore";
+import {
+  getFirestore,
+  collection,
+  doc,
+  setDoc,
+  getDoc,
+} from "firebase/firestore";
 import {
   getAuth,
   signInWithPopup,
@@ -36,7 +42,10 @@ export const signInWithGoogle = async () => {
 export const logOut = async () => {
   try {
     await signOut(auth);
+    console.log("successfully signed in");
   } catch (error) {
     console.log(error);
   }
 };
+
+export const usersRef = collection(db, "users");

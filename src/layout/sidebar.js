@@ -3,11 +3,8 @@ import "../styles/layout/sidebar.scss";
 import { useEffect, memo, useCallback } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { useLocalStorage } from "../hooks/useStorage";
-import LocalAtmOutlinedIcon from "@mui/icons-material/LocalAtmOutlined";
-import ListAltOutlinedIcon from "@mui/icons-material/ListAltOutlined";
-import MusicNoteIcon from "@mui/icons-material/MusicNote";
-import RestaurantMenuIcon from "@mui/icons-material/RestaurantMenu";
-import GitHubIcon from "@mui/icons-material/GitHub";
+import ForumRoundedIcon from "@mui/icons-material/ForumRounded";
+
 import { useLayoutContext } from "../contexts/layoutContext";
 import { Tooltip } from "../components/utils";
 
@@ -16,8 +13,8 @@ const NAVIGATION = [
     header: "Main",
     items: [
       {
-        title: "Tasks",
-        icon: <ListAltOutlinedIcon fontSize="large" />,
+        title: "Messages",
+        icon: <ForumRoundedIcon fontSize="large" />,
         path: "/tasks",
         tooltip: "Manage your tasks", // Added tooltip
       },
